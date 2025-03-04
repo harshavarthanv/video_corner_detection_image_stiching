@@ -20,13 +20,11 @@ The goal of this project is to develop **computer vision pipelines** for:
   - [Step 1: Clone the Repository](#step-1-clone-the-repository)
   - [Step 2: Install Dependencies](#step-2-install-dependencies)
   - [Step 3: Running the Jupyter Notebook](#step-3-running-the-jupyter-notebook)
-- [Running the Project](#running-the-project)
+- [About the Project](#About-the-project)
   - [Problem 1: Paper Corner Detection](#problem-1-paper-corner-detection)
   - [Problem 2: Image Stitching for Panorama](#problem-2-image-stitching-for-panorama)
 - [Project Structure](#project-structure)
 - [How the Code Works](#how-the-code-works)
-- [Authors](#authors)
-- [License](#license)
 
 ---
 
@@ -68,12 +66,8 @@ jupyter notebook
 
 ```
 Then, open harshav_project2.ipynb in Jupyter and execute the code step by step.
-## **Running the Project**
+## **About the Project**
 ### **Problem 1: Paper Corner Detection**
-Command to Run
-```
-python paper_corner_detection.py --input video.mp4 --output processed_video.mp4
-```
 **Processing Pipeline**
 - Reads video frames using OpenCV.
 - Removes blurry frames using Variance of Laplacian (Threshold = 150).
@@ -88,10 +82,6 @@ python paper_corner_detection.py --input video.mp4 --output processed_video.mp4
 - Removed blurry frames count displayed in the console.
 
 ### **Problem 2: Image Stitching for Panorama**
-Command to Run
-```
-python image_stitching.py --input images/ --output panorama.jpg
-```
 **Processing Pipeline**
 Loads 4 input images.
 - Extracts features using SIFT, ORB, or another feature extractor.
@@ -107,8 +97,6 @@ Loads 4 input images.
 ```
 enpm673_project2/
 ├── harshav_project2.ipynb      # Jupyter Notebook for full execution
-├── paper_corner_detection.py   # Python script for video processing (Problem 1)
-├── image_stitching.py          # Python script for image stitching (Problem 2)
 ├── input/
 │   ├── video.mp4               # Input video for corner detection
 │   ├── images/                 # Folder containing 4 input images for stitching
