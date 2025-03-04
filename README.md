@@ -75,17 +75,17 @@ Command to Run
 python paper_corner_detection.py --input video.mp4 --output processed_video.mp4
 ```
 **Processing Pipeline**
--Reads video frames using OpenCV.
--Removes blurry frames using Variance of Laplacian (Threshold = 150).
--Converts images to grayscale.
--Detects edges using Canny Edge Detection.
--Extracts Hough Lines from detected edges.
--Identifies intersecting lines as potential corners.
--Verifies corners using Harris Corner Detector.
--Overlays the boundary (blue lines) and corners (red dots) on the output video.
+- Reads video frames using OpenCV.
+- Removes blurry frames using Variance of Laplacian (Threshold = 150).
+- Converts images to grayscale.
+- Detects edges using Canny Edge Detection.
+- Extracts Hough Lines from detected edges.
+- Identifies intersecting lines as potential corners.
+- Verifies corners using Harris Corner Detector.
+- Overlays the boundary (blue lines) and corners (red dots) on the output video.
 **Expected Output**
--A video file with corner-detected frames.
--Removed blurry frames count displayed in the console.
+- A video file with corner-detected frames.
+- Removed blurry frames count displayed in the console.
 
 ### **Problem 2: Image Stitching for Panorama**
 Command to Run
@@ -94,14 +94,14 @@ python image_stitching.py --input images/ --output panorama.jpg
 ```
 **Processing Pipeline**
 Loads 4 input images.
--Extracts features using SIFT, ORB, or another feature extractor.
--Matches features using FLANN or brute-force matcher.
--Uses RANSAC to filter out bad matches.
--Computes homographies between image pairs.
--Warps images onto a common plane.
--Blends images to create a final stitched panorama.
+- Extracts features using SIFT, ORB, or another feature extractor.
+- Matches features using FLANN or brute-force matcher.
+- Uses RANSAC to filter out bad matches.
+- Computes homographies between image pairs.
+- Warps images onto a common plane.
+- Blends images to create a final stitched panorama.
 **Expected Output**
--A stitched panoramic image saved as panorama.jpg.
+- A stitched panoramic image saved as panorama.jpg.
 
 ## **Project Structure**
 ```
@@ -124,16 +124,16 @@ enpm673_project2/
 
 ## **How the Code Works**
 **1. Paper Corner Detection**
--Reads each video frame.
--Removes blurry frames using Variance of Laplacian.
--Detects edges using Canny.
--Finds lines using Hough Transform.
--Extracts intersections (putative corners).
--Validates corners using Harris Corner Detector.
--Overlays the edges and corners onto the video.
+- Reads each video frame.
+- Removes blurry frames using Variance of Laplacian.
+- Detects edges using Canny.
+- Finds lines using Hough Transform.
+- Extracts intersections (putative corners).
+- Validates corners using Harris Corner Detector.
+- Overlays the edges and corners onto the video.
 **2. Image Stitching**
--Extracts keypoints using SIFT/ORB.
--Matches keypoints between consecutive images.
--Filters incorrect matches using RANSAC.
--Computes homographies to warp images together.
--Blends images to create a seamless panoramic output.
+- Extracts keypoints using SIFT/ORB.
+- Matches keypoints between consecutive images.
+- Filters incorrect matches using RANSAC.
+- Computes homographies to warp images together.
+- Blends images to create a seamless panoramic output.
